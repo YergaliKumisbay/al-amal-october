@@ -37,6 +37,7 @@
     list-style: none;
     margin: 28px 0 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 .navbar__menu-item {
@@ -62,7 +63,6 @@
     line-height: normal;
 }
 
-/* Кнопка меню (Каталог / О нас) */
 .navbar__menu-button,
 .navbar__lang {
     display: inline-flex;
@@ -74,14 +74,12 @@
     cursor: pointer;
 }
 
-/* Иконка полигона – точные размеры */
 .navbar__menu-button img,
 .navbar__lang img {
     width: 4.721px;
     height: 4.088px;
 }
 
-/* Ховер */
 .navbar__menu-item a:hover,
 .navbar__menu-button:hover,
 .navbar__lang:hover,
@@ -90,7 +88,6 @@
     color: #cc9933;
 }
 
-/* Блок с языком и адресами */
 .navbar__actions {
     display: flex;
     align-items: flex-start;
@@ -146,24 +143,27 @@
     height: 3.735px;
 }
 
-/* Адаптивность */
+
 @media (max-width: 1200px) {
     .navbar__container {
-        grid-template-columns: auto 1fr;
-        gap: 20px 28px;
         padding: 24px 48px 0;
-    }
-
-    .navbar__actions {
-        grid-column: 2;
-        justify-content: flex-end;
-        margin-top: -6px;
+        gap: 20px;
     }
 
     .navbar__menu {
-        justify-content: flex-start;
         gap: 24px;
-        margin-top: 18px;
+        margin-top: 28px;
+    }
+
+    .navbar__actions {
+        margin-top: 28px;
+        gap: 20px;
+    }
+
+    .navbar__addresses-list {
+        max-width: none;
+        margin-left: 0;
+        justify-content: flex-end;
     }
 }
 
@@ -178,6 +178,7 @@
         grid-template-columns: 1fr;
         justify-items: center;
         padding: 20px 24px;
+        gap: 16px;
     }
 
     .navbar__logo img {
@@ -186,37 +187,62 @@
     }
 
     .navbar__menu {
+        flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         margin-top: 0;
         gap: 16px 24px;
     }
 
     .navbar__actions {
-        grid-column: auto;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        gap: 14px;
+        gap: 24px;
         margin-top: 0;
+        width: auto;
     }
 
     .navbar__addresses {
-        align-items: center;
+        align-items: flex-end;
     }
 
     .navbar__addresses-list {
-        justify-content: center;
-        max-width: none;
+        justify-content: flex-end;
         margin-left: 0;
+        max-width: none;
     }
 }
 
 @media (max-width: 640px) {
+    .navbar__container {
+        padding: 16px;
+    }
+
     .navbar__menu {
         flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
 
     .navbar__actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navbar__addresses {
+        align-items: center;
         text-align: center;
+    }
+
+    .navbar__addresses-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .navbar__addresses-list img {
+        display: none;
     }
 
     .navbar__addresses-head {

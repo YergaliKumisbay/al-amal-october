@@ -61,7 +61,7 @@ export const categories = {
     },
     hinkali: {
         title: 'Хинкали',
-        items: [], // позже добавим
+        items: [],
     },
     pepper: {
         title: 'Перец фаршированный',

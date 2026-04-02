@@ -5,7 +5,7 @@ import { categories } from '../../data/menuData';
 import './CategoryPage.css';
 
 const CategoryPage = () => {
-    const { category } = useParams(); // получаем manty, pelmeni, etc.
+    const { category } = useParams();
     const categoryData = categories[category];
 
     if (!categoryData) {

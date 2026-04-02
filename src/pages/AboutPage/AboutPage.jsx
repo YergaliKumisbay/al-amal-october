@@ -9,7 +9,6 @@ import rectangleIcon from '../../assets/icons/rectangle.svg';
 const AboutPage = () => {
     return (
         <div className="about-company-page">
-            {/* Блок «О компании» */}
             <div className="about-company-container">
                 <img src={image1} alt="О компании" className="about-image" />
                 <div className="about-text">
@@ -24,7 +23,6 @@ const AboutPage = () => {
                 </div>
             </div>
 
-            {/* Блок «Наше производство» */}
             <div className="about-company-container production">
                 <h2>Наше производство</h2>
                 <div className="production-gallery">

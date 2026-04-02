@@ -13,5 +13,4 @@ export const infoItems = [
         date: '10 марта 2026',
         image: '/src/assets/images/useful2.png',
     },
-    // ... добавьте другие
 ];

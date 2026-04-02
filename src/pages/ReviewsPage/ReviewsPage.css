@@ -48,7 +48,6 @@
     display: block;
 }
 
-/* Адаптивность */
 @media (max-width: 992px) {
     .reviews-grid {
         grid-template-columns: repeat(3, 1fr);

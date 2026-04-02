@@ -2,7 +2,6 @@ import React from 'react';
 import PromotionCard from '../../components/PromotionCard/PromotionCard';
 import './PromotionsPage.css';
 
-// Пример данных акций (можно вынести в отдельный файл data/promotions.js)
 const promotions = [
     {
         id: 1,
@@ -18,7 +17,6 @@ const promotions = [
         description: 'результаты 01 января 2026',
         buttonText: 'Читать',
     },
-    // можно добавить больше акций
 ];
 
 const PromotionsPage = () => {

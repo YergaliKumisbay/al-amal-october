@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom'; // добавляем импорт Link
 import './Dropdown.css';
 
 const Dropdown = ({ items, isOpen, onClose }) => {
@@ -19,7 +20,7 @@ const Dropdown = ({ items, isOpen, onClose }) => {
     }, [isOpen, onClose]);
 
     const handleItemClick = () => {
-        onClose(); // закрываем дропдаун после выбора пункта
+        onClose();
     };
 
     if (!isOpen) return null;
@@ -29,9 +30,13 @@ const Dropdown = ({ items, isOpen, onClose }) => {
             <ul className="dropdown__list">
                 {items.map((item, index) => (
                     <li key={index} className="dropdown__item">
-                        <span href={item.link || '#'} className="dropdown__title" onClick={handleItemClick}>
+                        <Link
+                            to={item.link || '#'}
+                            className="dropdown__title"
+                            onClick={handleItemClick}
+                        >
                             {item.label}
-                        </span>
+                        </Link>
                     </li>
                 ))}
             </ul>

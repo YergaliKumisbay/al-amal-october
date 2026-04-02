@@ -33,12 +33,10 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer__container">
-                {/* Левая колонка: логотип */}
                 <div className="footer__logo">
                     <img src={logo} alt="Al-Amal" />
                 </div>
 
-                {/* Колонка: Каталог (два столбца) */}
                 <div className="footer__column footer__column--catalog">
                     <h3 className="footer__title">Каталог</h3>
                     <div className="footer__catalog-grid">
@@ -50,7 +48,6 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Колонка: Навигация */}
                 <div className="footer__column">
                     <h3 className="footer__title">Навигация</h3>
                     <ul className="footer__list">
@@ -62,7 +59,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Колонка: Адреса и филиалы */}
                 <div className="footer__column">
                     <h3 className="footer__title">Адреса и филиалы</h3>
                     <ul className="footer__list">
@@ -74,7 +70,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Копирайт (правый верхний угол) */}
                 <div className="footer__copyright">
                     <span>AL-Amal, 2026</span>
                 </div>

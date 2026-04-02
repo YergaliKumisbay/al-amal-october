@@ -1,7 +1,5 @@
-/* MenuSection.css */
-
 .menu-section {
-    margin-bottom: 60px; /* әр секцияның арасындағы қашықтық */
+    margin-bottom: 60px;
 }
 
 .section-title {
@@ -9,7 +7,7 @@
     font-family: 'KZ Circe', sans-serif;
     font-size: 42px;
     font-weight: 400;
-    line-height: 64px; /* 152.381% */
+    line-height: 64px;
     margin: 0 0 32px 0;
     position: relative;
 }
@@ -27,13 +25,19 @@
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px; /* Figma бойынша gap 20px */
+    gap: 20px;
 }
 
-/* Адаптивтілік */
+@media (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 18px;
+    }
+}
+
 @media (max-width: 768px) {
     .section-title {
-        font-size: 32px;
+        font-size: 36px;
         line-height: 48px;
     }
     .cards-grid {
@@ -43,7 +47,12 @@
 }
 
 @media (max-width: 480px) {
+    .section-title {
+        font-size: 32px;
+        line-height: 44px;
+    }
     .cards-grid {
-        grid-template-columns: 1fr; /* мобильді құрылғыларда бір баған */
+        gap: 16px;
+        justify-content: center;
     }
 }
