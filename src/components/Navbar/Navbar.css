@@ -1,0 +1,225 @@
+.navbar {
+    position: relative;
+    z-index: 30;
+    background: #fff;
+}
+
+.navbar--home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+}
+
+.navbar__container {
+    max-width: 1460px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+    gap: 28px;
+    padding: 28px 80px 0;
+}
+
+.navbar__logo img {
+    width: 105.897px;
+    height: 105.897px;
+    display: block;
+    object-fit: contain;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    list-style: none;
+    margin: 28px 0 0;
+    padding: 0;
+}
+
+.navbar__menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__menu-item a,
+.navbar__menu-button,
+.navbar__lang,
+.navbar__addresses-head,
+.navbar__addresses-list a {
+    color: #333;
+    font-family: 'KZ Circe', sans-serif;
+    text-decoration: none;
+}
+
+.navbar__menu-item a,
+.navbar__menu-button {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Кнопка меню (Каталог / О нас) */
+.navbar__menu-button,
+.navbar__lang {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Иконка полигона – точные размеры */
+.navbar__menu-button img,
+.navbar__lang img {
+    width: 4.721px;
+    height: 4.088px;
+}
+
+/* Ховер */
+.navbar__menu-item a:hover,
+.navbar__menu-button:hover,
+.navbar__lang:hover,
+.navbar__addresses-head:hover,
+.navbar__addresses-list a:hover {
+    color: #cc9933;
+}
+
+/* Блок с языком и адресами */
+.navbar__actions {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    margin-top: 28px;
+}
+
+.navbar__lang {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.navbar__addresses {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.navbar__addresses-head {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.navbar__addresses-head img {
+    width: 16.873px;
+    height: 19.686px;
+}
+
+.navbar__addresses-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    max-width: 220px;
+    margin-left: 28px;
+}
+
+.navbar__addresses-list a {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+.navbar__addresses-list img {
+    width: 3.735px;
+    height: 3.735px;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .navbar__container {
+        grid-template-columns: auto 1fr;
+        gap: 20px 28px;
+        padding: 24px 48px 0;
+    }
+
+    .navbar__actions {
+        grid-column: 2;
+        justify-content: flex-end;
+        margin-top: -6px;
+    }
+
+    .navbar__menu {
+        justify-content: flex-start;
+        gap: 24px;
+        margin-top: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar,
+    .navbar--home {
+        position: relative;
+        background: #fff;
+    }
+
+    .navbar__container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 20px 24px;
+    }
+
+    .navbar__logo img {
+        width: 105.897px;
+        height: 105.897px;
+    }
+
+    .navbar__menu {
+        flex-wrap: wrap;
+        margin-top: 0;
+        gap: 16px 24px;
+    }
+
+    .navbar__actions {
+        grid-column: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        margin-top: 0;
+    }
+
+    .navbar__addresses {
+        align-items: center;
+    }
+
+    .navbar__addresses-list {
+        justify-content: center;
+        max-width: none;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar__menu {
+        flex-direction: column;
+    }
+
+    .navbar__actions {
+        text-align: center;
+    }
+
+    .navbar__addresses-head {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,63 @@
+.promotion-card {
+    width: 580px;
+    border-radius: 35px;
+    border: 1px solid #e2e2e2;
+    background-color: #fff;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.promotion-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.promotion-card__image {
+    width: 100%;
+    height: 246.155px;
+    object-fit: cover;
+    border-radius: 35px 35px 0 0;
+    background-color: #FFFFFF;
+}
+
+.promotion-card__content {
+    padding: 20px;
+}
+
+.promotion-card__title {
+    color: #333;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    width: 415px;
+    line-height: 23.152px;
+    margin: 0 0 12px 0;
+}
+
+.promotion-card__description {
+    color: #333;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 28.94px;
+    margin: 0 0 20px 0;
+}
+
+.promotion-card__button {
+    width: 104.156px;
+    height: 40.088px;
+    border-radius: 8px;
+    background-color: #c93;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.promotion-card__button:hover {
+    background-color: #b07d2e;
+}

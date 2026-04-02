@@ -1,0 +1,39 @@
+.breadcrumbs {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #999;
+}
+
+.breadcrumb-link {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb-link:hover {
+    color: #c93;
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    display: inline-flex;
+    align-items: center;
+}
+
+.breadcrumb-separator img {
+    width: 1.823px;
+    height: 1.823px;
+    display: block;
+}
+
+.breadcrumb-current {
+    color: #999;
+    font-weight: 300;
+}
