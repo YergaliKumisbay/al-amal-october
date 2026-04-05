@@ -1,0 +1,15 @@
+{% if items %}
+    <div class="breadcrumbs">
+        {% for item in items %}
+            {% if item.url %}
+                <a class="breadcrumb-link" href="{{ item.url }}">{{ item.label }}</a>
+            {% else %}
+                <span class="breadcrumb-current">{{ item.label }}</span>
+            {% endif %}
+
+            {% if not loop.last %}
+                <span class="breadcrumb-separator"><img src="{{ 'assets/icons/ellipse.svg'|theme }}" alt=""></span>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

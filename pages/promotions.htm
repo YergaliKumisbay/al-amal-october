@@ -1,0 +1,27 @@
+##
+url = "/promotions"
+layout = "default"
+title = "Акции"
+meta_title = "Al-Amal | Акции"
+
+[collection promotions]
+handle = "Content\Promotion"
+==
+{% set breadcrumbItems = [
+    { label: 'Главная', url: 'index'|page },
+    { label: 'Акции' }
+] %}
+{% set promotionList = promotions.orderBy('published_at', 'desc').get() %}
+
+{% partial 'site/breadcrumbs' items=breadcrumbItems %}
+
+<main class="promotions-page">
+    <h1 class="promotions-page__title">Акции</h1>
+    <div class="promotions-grid">
+        {% for promotion in promotionList %}
+            {% partial 'content/promotion-card' promotion=promotion %}
+        {% else %}
+            <p class="category-page__empty">Акции скоро появятся.</p>
+        {% endfor %}
+    </div>
+</main>

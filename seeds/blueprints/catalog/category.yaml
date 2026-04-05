@@ -1,0 +1,47 @@
+uuid: 4ce16ab9-b07d-4b17-89b9-670a43d5d3f6
+handle: Catalog\Category
+type: structure
+name: Category
+drafts: false
+
+structure:
+    maxDepth: 1
+
+navigation:
+    parent: 8fbdab90-9d90-4ab9-86dc-3fb0b7584631
+    label: Категории каталога
+    icon: icon-list
+    order: 50
+
+fields:
+    show_on_home:
+        label: Показывать на главной
+        type: checkbox
+        default: true
+
+    products:
+        label: Товары
+        type: repeater
+        prompt: Добавить товар
+        form:
+            fields:
+                title:
+                    label: Название
+                    type: text
+
+                composition:
+                    label: Состав
+                    type: textarea
+                    size: small
+
+                price:
+                    label: Цена
+                    type: text
+
+                image_path:
+                    label: Путь к изображению
+                    type: text
+
+                order_button_label:
+                    label: Текст кнопки
+                    type: text

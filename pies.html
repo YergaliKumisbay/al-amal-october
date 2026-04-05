@@ -1,0 +1,155 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Amal | Пироги</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/gh/temirkhanov/kz-circle-font@main/fonts/kz-circle.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="src/App.css">
+    <link rel="stylesheet" href="src/components/common/BackgroundDecorations/BackgroundDecorations.css">
+    <link rel="stylesheet" href="src/components/Navbar/Navbar.css">
+    <link rel="stylesheet" href="src/components/common/Dropdown/Dropdown.css">
+    <link rel="stylesheet" href="src/components/Breadcrumbs/Breadcrumbs.css">
+    <link rel="stylesheet" href="src/components/Footer/Footer.css">
+    <link rel="stylesheet" href="src/components/common/Card/Card.css">
+    <link rel="stylesheet" href="src/components/common/QuantitySelector/QuantitySelector.css">
+    <link rel="stylesheet" href="src/pages/CategoryPage/CategoryPage.css">
+    <link rel="stylesheet" href="assets/css/static.css">
+</head>
+<body class="page">
+    <div class="app-shell">
+        <div class="bg-decorations" aria-hidden="true">
+            <img class="bg-decorations__item bg-decorations__item--primary bg-decorations__item--top-right" src="assets/decors/decor1.svg" alt="">
+            <img class="bg-decorations__item bg-decorations__item--secondary bg-decorations__item--bottom-left" src="assets/decors/decor2.svg" alt="">
+        </div>
+
+        <div class="app-content">
+            <nav class="navbar" aria-label="Основная навигация">
+                <div class="navbar__container">
+                    <a class="navbar__logo" href="index.html"><img src="assets/logo.png" alt="Al-Amal"></a>
+
+                    <ul class="navbar__menu">
+                        <li class="navbar__menu-item navbar__menu-item--dropdown">
+                            <details class="nav-dropdown">
+                                <summary class="navbar__menu-button">
+                                    Каталог
+                                    <img src="assets/icons/poligon.svg" alt="">
+                                </summary>
+                                <div class="dropdown">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item"><a class="dropdown__title" href="catalog.html">Манты</a></li>
+                                        <li class="dropdown__item"><a class="dropdown__title" href="pelmeni.html">Пельмени и вареники</a></li>
+                                        <li class="dropdown__item"><a class="dropdown__title" href="hinkali.html">Хинкали</a></li>
+                                        <li class="dropdown__item"><a class="dropdown__title" href="pepper.html">Перец фаршированный</a></li>
+                                        <li class="dropdown__item"><a class="dropdown__title" href="cutlets.html">Котлеты</a></li>
+                                        <li class="dropdown__item"><a class="dropdown__title" href="dough.html">Тесто</a></li>
+                                        <li class="dropdown__item"><a class="dropdown__title" href="samsa.html">Самса, сосиски в тесте</a></li>
+                                        <li class="dropdown__item"><a class="dropdown__title" href="borek.html">Борек</a></li>
+                                        <li class="dropdown__item"><a class="dropdown__title" href="pancakes.html">Печенье / блины</a></li>
+                                        <li class="dropdown__item"><a class="dropdown__title" href="pies.html">Пироги</a></li>
+                                        <li class="dropdown__item"><a class="dropdown__title" href="pastry.html">Готовая выпечка</a></li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </li>
+
+                        <li class="navbar__menu-item navbar__menu-item--dropdown">
+                            <details class="nav-dropdown">
+                                <summary class="navbar__menu-button">
+                                    О нас
+                                    <img src="assets/icons/poligon.svg" alt="">
+                                </summary>
+                                <div class="dropdown">
+                                    <ul class="dropdown__list">
+                                        <li class="dropdown__item"><a class="dropdown__title" href="about.html">О компании</a></li>
+                                        <li class="dropdown__item"><a class="dropdown__title" href="promotions.html">Акции</a></li>
+                                        <li class="dropdown__item"><a class="dropdown__title" href="reviews.html">Отзывы</a></li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </li>
+
+                        <li class="navbar__menu-item"><a href="info.html">Полезная информация</a></li>
+                        <li class="navbar__menu-item"><a href="delivery.html">Доставка</a></li>
+                    </ul>
+
+                    <div class="navbar__actions">
+                        <span class="navbar__lang">Ру <img src="assets/icons/poligon.svg" alt=""></span>
+                        <div class="navbar__addresses">
+                            <a class="navbar__addresses-head" href="address.html">
+                                <img src="assets/icons/location.svg" alt="">
+                                <span>Адреса и филиалы</span>
+                            </a>
+                            <div class="navbar__addresses-list">
+                                <a href="address.html">Мы в Экибастузе</a>
+                                <img src="assets/icons/ellipse.svg" alt="">
+                                <a href="address.html">Мы в Алматы</a>
+                                <img src="assets/icons/ellipse.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="breadcrumbs">
+                <a class="breadcrumb-link" href="index.html">Главная</a>
+                <span class="breadcrumb-separator"><img src="assets/icons/ellipse.svg" alt=""></span>
+                <span class="breadcrumb-current">Каталог</span>
+                <span class="breadcrumb-separator"><img src="assets/icons/ellipse.svg" alt=""></span>
+                <span class="breadcrumb-current">Пироги</span>
+            </div>
+
+            <main class="category-page">
+                <div class="category-page__container">
+                    <h1 class="category-page__title">Пироги</h1>
+                    <div class="category-page__grid">
+                        <p class="category-page__empty">Товары в этой категории скоро появятся.</p>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__logo"><img src="assets/logo.png" alt="Al-Amal"></div>
+                    <div class="footer__column footer__column--catalog">
+                        <h3 class="footer__title">Каталог</h3>
+                        <div class="footer__catalog-grid">
+                            <div class="footer__catalog-item"><a href="catalog.html">Манты</a></div>
+                            <div class="footer__catalog-item"><a href="pelmeni.html">Пельмени и вареники</a></div>
+                            <div class="footer__catalog-item"><a href="hinkali.html">Хинкали</a></div>
+                            <div class="footer__catalog-item"><a href="pepper.html">Перец фаршированный</a></div>
+                            <div class="footer__catalog-item"><a href="cutlets.html">Котлеты</a></div>
+                            <div class="footer__catalog-item"><a href="dough.html">Тесто</a></div>
+                            <div class="footer__catalog-item"><a href="samsa.html">Самса</a></div>
+                            <div class="footer__catalog-item"><a href="borek.html">Борек</a></div>
+                            <div class="footer__catalog-item"><a href="pancakes.html">Печенье/Блины</a></div>
+                            <div class="footer__catalog-item"><a href="pies.html">Пироги</a></div>
+                            <div class="footer__catalog-item"><a href="pastry.html">Готовая выпечка</a></div>
+                        </div>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__title">Навигация</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="about.html">О нас</a></li>
+                            <li class="footer__item"><a href="info.html">Полезная информация</a></li>
+                            <li class="footer__item"><a href="delivery.html">Доставка</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__title">Адреса и филиалы</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">Мы в Экибастузе</li>
+                            <li class="footer__item">Мы в Алматы</li>
+                        </ul>
+                    </div>
+                    <div class="footer__copyright"><span>AL-Amal, 2026</span></div>
+                    <div class="footer__visual"><img class="footer__right-text" src="assets/icons/footer-text.png" alt=""></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
+

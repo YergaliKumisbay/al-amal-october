@@ -1,0 +1,11 @@
+.app-shell {
+    position: relative;
+    min-height: 100vh;
+    isolation: isolate;
+    background: #fff;
+}
+
+.app-content {
+    position: relative;
+    z-index: 1;
+}

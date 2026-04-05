@@ -1,0 +1,34 @@
+##
+url = "/catalog/:slug"
+layout = "default"
+title = "Категория"
+meta_title = "{{ category.title ? 'Al-Amal | ' ~ category.title : 'Al-Amal | Каталог' }}"
+
+[section category]
+handle = "Catalog\Category"
+identifier = "slug"
+==
+{% if category is empty %}
+    {% do abort(404) %}
+{% endif %}
+
+{% set breadcrumbItems = [
+    { label: 'Главная', url: 'index'|page },
+    { label: 'Каталог', url: 'catalog'|page },
+    { label: category.title }
+] %}
+
+{% partial 'site/breadcrumbs' items=breadcrumbItems %}
+
+<main class="category-page">
+    <div class="category-page__container">
+        <h1 class="category-page__title">{{ category.title }}</h1>
+        <div class="category-page__grid">
+            {% for product in category.products %}
+                {% partial 'catalog/product-card' product=product %}
+            {% else %}
+                <p class="category-page__empty">Скоро здесь появятся товары.</p>
+            {% endfor %}
+        </div>
+    </div>
+</main>

@@ -1,0 +1,201 @@
+.page {
+    overflow-x: hidden;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    border: 0;
+    white-space: nowrap;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown > summary {
+    list-style: none;
+}
+
+.nav-dropdown > summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav-dropdown .dropdown {
+    display: none;
+}
+
+.nav-dropdown[open] .dropdown {
+    display: block;
+}
+
+.nav-dropdown[open] > summary {
+    color: #cc9933;
+}
+
+.catalog-page__intro {
+    max-width: 720px;
+    margin: 0 0 24px;
+    color: #666;
+    font-family: "KZ Circe", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.catalog-page__links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-bottom: 56px;
+}
+
+.catalog-page__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 12px 18px;
+    border: 1px solid rgba(204, 153, 51, 0.25);
+    border-radius: 16px;
+    background: rgba(209, 248, 255, 0.35);
+    color: #333;
+    text-align: center;
+    font-family: "KZ Circe", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.catalog-page__link:hover {
+    border-color: #cc9933;
+    background: rgba(204, 153, 51, 0.08);
+    transform: translateY(-1px);
+}
+
+.catalog-page__section {
+    scroll-margin-top: 120px;
+}
+
+.card__order-btn,
+.promotion-card__button,
+.useful-card-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.qty-input {
+    width: 44px;
+    border: 0;
+    background: transparent;
+    color: #333;
+    text-align: center;
+    font-family: "KZ Circe", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-inner-spin-button,
+.qty-input::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+.reviews-page__set {
+    display: none;
+}
+
+#reviews-page-1:checked ~ .reviews-page__set--1,
+#reviews-page-2:checked ~ .reviews-page__set--2 {
+    display: grid;
+}
+
+#reviews-page-1:checked ~ .pagination label[for="reviews-page-1"],
+#reviews-page-2:checked ~ .pagination label[for="reviews-page-2"] {
+    background-color: #c93;
+    color: #fff;
+}
+
+.useful-card {
+    display: flex;
+    flex-direction: column;
+}
+
+#useful-all:checked ~ .useful-info-tabs label[for="useful-all"],
+#useful-articles:checked ~ .useful-info-tabs label[for="useful-articles"],
+#useful-recipes:checked ~ .useful-info-tabs label[for="useful-recipes"] {
+    color: #333;
+    font-weight: 400;
+}
+
+#useful-all:checked ~ .useful-info-tabs label[for="useful-all"]::after,
+#useful-articles:checked ~ .useful-info-tabs label[for="useful-articles"]::after,
+#useful-recipes:checked ~ .useful-info-tabs label[for="useful-recipes"]::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: -10px;
+    width: 28px;
+    height: 4px;
+    border-radius: 999px;
+    background: #c93;
+}
+
+#useful-articles:checked ~ .useful-info-grid .useful-card[data-type="recipes"],
+#useful-recipes:checked ~ .useful-info-grid .useful-card[data-type="articles"] {
+    display: none;
+}
+
+.address-page__panel {
+    display: none;
+}
+
+#branch-1:checked ~ .address-layout .branch-item--1,
+#branch-2:checked ~ .address-layout .branch-item--2,
+#branch-3:checked ~ .address-layout .branch-item--3,
+#branch-4:checked ~ .address-layout .branch-item--4,
+#branch-5:checked ~ .address-layout .branch-item--5,
+#branch-6:checked ~ .address-layout .branch-item--6 {
+    background: #c93;
+    color: #fff;
+}
+
+#branch-1:checked ~ .address-layout .address-page__panel--1,
+#branch-2:checked ~ .address-layout .address-page__panel--2,
+#branch-3:checked ~ .address-layout .address-page__panel--3,
+#branch-4:checked ~ .address-layout .address-page__panel--4,
+#branch-5:checked ~ .address-layout .address-page__panel--5,
+#branch-6:checked ~ .address-layout .address-page__panel--6 {
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .nav-dropdown .dropdown {
+        position: static;
+        transform: none;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-page__links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog-page__links {
+        grid-template-columns: 1fr;
+    }
+}

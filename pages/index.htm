@@ -1,0 +1,66 @@
+url = "/"
+layout = "default"
+title = "Главная"
+meta_title = "{{ home.hero_title ?: 'Al-Amal | Главная' }}"
+
+[section home]
+handle = "Page\Home"
+
+[collection categories]
+handle = "Catalog\Category"
+==
+{% set featuredCategories = categories.where('show_on_home', 1).orderBy('nest_left').get() %}
+{% if featuredCategories|length == 0 %}
+    {% set featuredCategories = categories.orderBy('nest_left').limit(2).get() %}
+{% endif %}
+
+<main class="main-page">
+    <section class="header">
+        <div class="header__bg-circle" aria-hidden="true"></div>
+        <div class="container">
+
+        <div class="header__content">
+            <h1 class="header__title">{{ home.hero_title ?: 'Al-Amal: Настоящий Домашний Вкус' }}</h1>
+            <p class="header__subtitle">{{ home.hero_subtitle ?: 'Еда от Al-Amal, разнообразная, вкусная, халяльная, и сделанная с душой.' }}</p>
+            <a class="header__cta" href="{{ 'catalog'|page }}">{{ home.hero_cta_label ?: 'Каталог' }}</a>
+        </div>
+
+        <div class="header__visual" aria-hidden="true">
+            <div class="header__orbit-wrap">
+                <img class="header__orbit" src="{{ 'assets/images/Group4.png'|theme }}" alt="">
+                <img class="header__center-image" src="{{ 'assets/images/centerImage.png'|theme }}" alt="">
+                <img class="header__center-text" src="{{ 'assets/images/centerText.png'|theme }}" alt="">
+            </div>
+
+            <img class="header__decor-image" src="{{ 'assets/images/Group1597879492.png'|theme }}" alt="">
+
+            <div class="header__socials">
+                <a class="header__social-link" href="{{ siteSettings.instagram_url ?: 'https://instagram.com/amal.ekb' }}" target="_blank" rel="noreferrer" aria-label="Instagram">
+                    <img src="{{ 'assets/images/instagram.png'|theme }}" alt="">
+                </a>
+                <a class="header__social-link" href="{{ siteSettings.whatsapp_url ?: 'https://wa.me/77028155758' }}" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                    <img src="{{ 'assets/images/whatsapp.png'|theme }}" alt="">
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <form class="search-bar" action="{{ 'catalog'|page }}" method="get">
+        <input class="search-bar__input" type="search" name="q" placeholder="Поиск по каталогу">
+        <button class="search-bar__button" type="submit">поиск</button>
+    </form>
+
+    {% for category in featuredCategories %}
+        <section class="menu-section">
+            <h2 class="section-title">{{ category.title }}</h2>
+            <div class="cards-grid">
+                {% for product in category.products|slice(0, 3) %}
+                    {% partial 'catalog/product-card' product=product %}
+                {% else %}
+                    <p class="category-page__empty">Скоро здесь появятся товары.</p>
+                {% endfor %}
+            </div>
+        </section>
+    {% endfor %}
+</main>

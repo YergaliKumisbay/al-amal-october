@@ -1,0 +1,25 @@
+uuid: a6d77703-ed22-4372-bfc3-8aa4ec7b8031
+handle: Content\Review
+type: stream
+name: Review
+drafts: false
+
+navigation:
+    parent: 8fbdab90-9d90-4ab9-86dc-3fb0b7584631
+    label: Отзывы
+    icon: icon-comments
+    order: 70
+
+fields:
+    published_at:
+        label: Дата публикации
+        type: datepicker
+        mode: date
+
+    image_path:
+        label: Путь к изображению
+        type: text
+
+    alt_text:
+        label: Alt текст
+        type: text

@@ -1,0 +1,237 @@
+.address-page {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 44px 20px 72px;
+    background: #fff;
+}
+
+.address-layout {
+    display: grid;
+    grid-template-columns: 269px minmax(0, 865.523px);
+    gap: 34px;
+    align-items: start;
+    justify-content: center;
+}
+
+.branch-card,
+.info-card,
+.map-card {
+    border: 1px solid #dedede;
+    background: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+}
+
+.branch-card {
+    width: 269px;
+    min-height: 321.444px;
+    padding: 18px 17px 20px;
+    border-radius: 14px;
+}
+
+.address-card-title {
+    margin: 0 0 12px;
+    color: #666;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.branch-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.branch-item {
+    width: 100%;
+    min-height: 38.848px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    color: #444;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.branch-item.is-active {
+    background: #c93;
+    color: #fff;
+}
+
+.branch-item:hover {
+    background: rgba(204, 153, 51, 0.12);
+}
+
+.branch-item.is-active:hover {
+    background: #c93;
+}
+
+.branch-index,
+.branch-name {
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.branch-index {
+    flex: 0 0 auto;
+}
+
+.branch-name {
+    flex: 1;
+}
+
+.address-content {
+    width: 100%;
+}
+
+.address-top-cards {
+    display: grid;
+    grid-template-columns: 365.523px 229.982px 229.982px;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.info-card {
+    height: 171px;
+    padding: 16px 20px 18px;
+    border-radius: 18px;
+}
+
+.address-info-card {
+    width: 365.523px;
+}
+
+.contact-card {
+    width: 229.982px;
+}
+
+.address-main-text {
+    margin: 0;
+    color: #444;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.contact-subtitle {
+    margin-top: 14px;
+}
+
+.contact-text {
+    display: block;
+    color: #444;
+    text-decoration: none;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.contact-text + .contact-text {
+    margin-top: 8px;
+}
+
+.contact-text:hover {
+    text-decoration: underline;
+}
+
+.map-card {
+    width: 865.523px;
+    height: 380.683px;
+    overflow: hidden;
+    border-radius: 35px;
+    background: lightgray;
+}
+
+.map-card iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+@media (max-width: 1220px) {
+    .address-layout {
+        grid-template-columns: 269px minmax(0, 1fr);
+    }
+
+    .address-top-cards {
+        grid-template-columns: minmax(280px, 365.523px) repeat(2, minmax(200px, 1fr));
+    }
+
+    .address-info-card,
+    .contact-card,
+    .map-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .address-page {
+        padding: 36px 20px 56px;
+    }
+
+    .address-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .branch-card {
+        width: 100%;
+    }
+
+    .address-top-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .info-card {
+        min-height: auto;
+    }
+
+    .map-card {
+        height: 340px;
+    }
+}
+
+@media (max-width: 576px) {
+    .address-page {
+        padding: 28px 16px 44px;
+    }
+
+    .branch-card,
+    .info-card {
+        padding: 16px;
+    }
+
+    .address-main-text {
+        font-size: 20px;
+        line-height: 31px;
+    }
+
+    .contact-text,
+    .branch-index,
+    .branch-name {
+        font-size: 15px;
+    }
+
+    .map-card {
+        height: 280px;
+        border-radius: 24px;
+    }
+}

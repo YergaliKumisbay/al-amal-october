@@ -1,0 +1,41 @@
+##
+url = "/about"
+layout = "default"
+title = "О компании"
+meta_title = "{{ about.title ? 'Al-Amal | ' ~ about.title : 'Al-Amal | О компании' }}"
+
+[section about]
+handle = "AlAmal\Page\About"
+==
+{% set breadcrumbItems = [
+    { label: 'Главная', url: 'index'|page },
+    { label: 'О нас' }
+] %}
+{% set introImagePath = about.intro_image_path ?: 'assets/images/about1.png' %}
+{% set introImageUrl = introImagePath starts with '/' ? introImagePath|media : introImagePath|theme %}
+
+{% partial 'site/breadcrumbs' items=breadcrumbItems %}
+
+<main class="about-company-page">
+    <div class="about-company-container">
+        <img src="{{ introImageUrl }}" alt="{{ about.title }}" class="about-image">
+        <div class="about-text">
+            <h2>{{ about.title ?: 'О компании' }}</h2>
+            {{ about.content|content }}
+        </div>
+    </div>
+
+    <div class="about-company-container production">
+        <h2>{{ about.production_title ?: 'Наше производство' }}</h2>
+        <div class="production-gallery">
+            {% for item in about.production_gallery %}
+                {% set imagePath = item.image_path ?: 'assets/images/about2.png' %}
+                {% set imageUrl = imagePath starts with '/' ? imagePath|media : imagePath|theme %}
+                <img src="{{ imageUrl }}" alt="{{ item.alt_text ?: about.production_title }}">
+            {% endfor %}
+        </div>
+        <div class="production-rectangle">
+            <img src="{{ 'assets/icons/rectangle.svg'|theme }}" alt="">
+        </div>
+    </div>
+</main>

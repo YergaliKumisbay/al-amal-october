@@ -1,0 +1,12 @@
+{% set imagePath = article.image_path ?: 'assets/images/useful1.png' %}
+{% set imageUrl = imagePath starts with '/' ? imagePath|media : imagePath|theme %}
+{% set isRecipe = article.kind == 'recipe' %}
+<article class="useful-card" data-type="{{ isRecipe ? 'recipes' : 'articles' }}">
+    <div class="useful-card-image"><img src="{{ imageUrl }}" alt="{{ article.title }}"></div>
+    <div class="useful-card-body">
+        <span class="useful-info-badge {{ isRecipe ? 'is-recipe' : 'is-article' }}">{{ isRecipe ? 'Рецепты' : 'Статьи' }}</span>
+        <h2 class="useful-card-title">{{ article.title }}</h2>
+        <p class="useful-card-date">{{ article.published_at|date('d F Y') }}</p>
+        <a class="useful-card-button" href="{{ 'article'|page({ slug: article.slug }) }}">{{ article.button_label ?: 'Читать' }}</a>
+    </div>
+</article>

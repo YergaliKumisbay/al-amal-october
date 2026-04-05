@@ -1,0 +1,37 @@
+url = "/info"
+layout = "default"
+title = "Полезная информация"
+meta_title = "Al-Amal | Полезная информация"
+
+[collection articles]
+handle = "Content\Article"
+==
+{% set breadcrumbItems = [
+    { label: 'Главная', url: 'index'|page },
+    { label: 'Полезная информация' }
+] %}
+{% set articleList = articles.orderBy('published_at', 'desc').get() %}
+
+{% partial 'site/breadcrumbs' items=breadcrumbItems %}
+
+<main class="useful-info-page">
+    <input class="visually-hidden" type="radio" name="useful-filter" id="useful-all" checked>
+    <input class="visually-hidden" type="radio" name="useful-filter" id="useful-articles">
+    <input class="visually-hidden" type="radio" name="useful-filter" id="useful-recipes">
+
+    <div class="useful-info-tabs" role="tablist" aria-label="Категории полезной информации">
+        <label class="useful-info-tab" for="useful-all">Все</label>
+        <span class="useful-info-separator" aria-hidden="true"></span>
+        <label class="useful-info-tab" for="useful-articles">Статьи</label>
+        <span class="useful-info-separator" aria-hidden="true"></span>
+        <label class="useful-info-tab" for="useful-recipes">Рецепты</label>
+    </div>
+
+    <div class="useful-info-grid">
+        {% for article in articleList %}
+            {% partial 'content/article-card' article=article %}
+        {% else %}
+            <p class="category-page__empty">Полезная информация скоро появится.</p>
+        {% endfor %}
+    </div>
+</main>

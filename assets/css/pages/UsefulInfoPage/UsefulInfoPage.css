@@ -1,0 +1,199 @@
+.useful-info-page {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 22px 20px 60px;
+    background: #fff;
+}
+
+.useful-info-tabs {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.useful-info-tab {
+    position: relative;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    color: #777;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 64px;
+    text-transform: capitalize;
+}
+
+.useful-info-tab.is-active {
+    color: #333;
+    font-weight: 400;
+}
+
+.useful-info-tab.is-active::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    bottom: -10px;
+    width: 28px;
+    height: 4px;
+    border-radius: 999px;
+    background: #c93;
+}
+
+.useful-info-separator {
+    width: 1px;
+    height: 35.678px;
+    background: #d2d2d2;
+}
+
+.useful-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.useful-card {
+    width: 380px;
+    height: 474.292px;
+    overflow: hidden;
+    border: 1px solid #e2e2e2;
+    border-radius: 35px;
+    background: #fff;
+}
+
+.useful-card-image {
+    width: 380px;
+    height: 246.155px;
+    overflow: hidden;
+    border-radius: 35px;
+}
+
+.useful-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.useful-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 18px 18px;
+}
+
+.useful-info-badge {
+    display: inline-flex;
+    height: 25px;
+    padding: 8px 11px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 60px;
+    color: #fff;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.useful-info-badge.is-recipe {
+    background: #318fcd;
+}
+
+.useful-info-badge.is-article {
+    background: #75c67d;
+}
+
+.useful-card-title {
+    margin: 0;
+    color: #333;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.152px;
+}
+
+.useful-card-date {
+    margin: 0;
+    color: #555;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28.94px;
+}
+
+.useful-card-button {
+    width: 104.156px;
+    height: 40.088px;
+    border: 0;
+    border-radius: 8px;
+    background: #c93;
+    color: #fff;
+    text-align: center;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.useful-card-button:hover {
+    background: #b88426;
+}
+
+@media (max-width: 1240px) {
+    .useful-info-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 380px));
+    }
+}
+
+@media (max-width: 768px) {
+    .useful-info-page {
+        padding: 20px 16px 44px;
+    }
+
+    .useful-info-tabs {
+        gap: 14px;
+        margin-bottom: 24px;
+    }
+
+    .useful-info-tab {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+    .useful-info-separator {
+        height: 26px;
+    }
+
+    .useful-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .useful-card,
+    .useful-card-image {
+        width: 100%;
+    }
+
+    .useful-card {
+        height: auto;
+    }
+
+    .useful-card-image {
+        height: 220px;
+    }
+}

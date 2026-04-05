@@ -1,0 +1,5 @@
+{% set imagePath = review.image_path ?: 'assets/images/review1.png' %}
+{% set imageUrl = imagePath starts with '/' ? imagePath|media : imagePath|theme %}
+<div class="review-card">
+    <img src="{{ imageUrl }}" alt="{{ review.alt_text ?: review.title }}">
+</div>

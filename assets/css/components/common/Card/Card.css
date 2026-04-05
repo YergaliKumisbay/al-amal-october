@@ -1,0 +1,101 @@
+.card {
+    border-radius: 17px;
+    border: 1px solid #e2e2e2;
+    background-color: #fff;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s ease;
+}
+
+.card__hart {
+    padding: 16px;
+}
+/*.card:hover {*/
+/*    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);*/
+/*}*/
+
+.card__image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 17px;
+    background-color: #f5f5f5; 
+}
+
+.card__title {
+    color: #333;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.152px; 
+    margin: 16px 0 8px 0;
+    text-transform: capitalize; 
+}
+
+.card__composition {
+    color: #555;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.94px; 
+}
+
+.card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.card__price {
+    color: #333;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.94px;
+}
+
+.card__order-btn {
+    background-color: #c93;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 15px 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+    text-align: center;
+    font-style: normal;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.card__order-btn:hover {
+    background-color: #b07d2e;
+}
+
+@media (max-width: 500px) {
+    .card {
+        padding: 12px;
+    }
+
+    .card__title {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .card__price {
+        font-size: 20px;
+    }
+
+    .card__order-btn {
+        font-size: 13px;
+        padding: 6px 16px;
+    }
+}

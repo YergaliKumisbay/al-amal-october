@@ -1,0 +1,64 @@
+uuid: c6bb6c04-d2ea-4df0-8f5f-af12d15adf3c
+handle: Location\Branch
+type: structure
+name: Branch
+drafts: false
+
+structure:
+    maxDepth: 1
+
+navigation:
+    parent: 8fbdab90-9d90-4ab9-86dc-3fb0b7584631
+    label: Филиалы
+    icon: icon-map-marker
+    order: 90
+
+fields:
+    city:
+        label: Город
+        type: entries
+        source: Location\City
+        maxItems: 1
+        required: true
+
+    header_label:
+        label: Короткое название филиала
+        type: text
+
+    address_text:
+        label: Полный адрес и график
+        type: textarea
+        size: small
+
+    telegram_label:
+        label: Telegram текст
+        type: text
+
+    telegram_url:
+        label: Telegram ссылка
+        type: text
+
+    whatsapp_label:
+        label: WhatsApp текст
+        type: text
+
+    whatsapp_url:
+        label: WhatsApp ссылка
+        type: text
+
+    email:
+        label: Email
+        type: text
+
+    instagram_label:
+        label: Instagram текст
+        type: text
+
+    instagram_url:
+        label: Instagram ссылка
+        type: text
+
+    map_embed_url:
+        label: Google Maps embed URL
+        type: textarea
+        size: small

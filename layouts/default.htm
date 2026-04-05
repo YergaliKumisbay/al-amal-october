@@ -1,0 +1,65 @@
+description = "Al-Amal default layout"
+
+[global siteSettings]
+handle = "Site\Settings"
+
+[collection navCategories]
+handle = "Catalog\Category"
+
+[collection branchCities]
+handle = "Location\City"
+
+[collection branchLinks]
+handle = "Location\Branch"
+==
+{% set pageTitle = this.page.meta_title ?: this.page.title ?: (siteSettings.company_name ?: 'Al-Amal') %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageTitle }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <link rel="icon" type="image/png" href="{{ 'assets/logo.png'|theme }}">
+    <link href="https://cdn.jsdelivr.net/gh/temirkhanov/kz-circle-font@main/fonts/kz-circle.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ 'assets/css/index.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/App.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/components/common/BackgroundDecorations/BackgroundDecorations.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/components/Navbar/Navbar.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/components/common/Dropdown/Dropdown.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/components/Breadcrumbs/Breadcrumbs.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/components/Footer/Footer.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/components/Header/Header.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/components/common/SearchBar/SearchBar.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/components/MenuSections/MenuSection.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/components/common/Card/Card.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/components/common/QuantitySelector/QuantitySelector.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/components/PromotionCard/PromotionCard.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/components/common/Pagination/Pagination.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/pages/Main/MainPage.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/pages/CategoryPage/CategoryPage.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/pages/AboutPage/AboutPage.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/pages/PromotionsPage/PromotionsPage.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/pages/ReviewsPage/ReviewsPage.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/pages/AddressPage/AddressPage.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/pages/DeliveryPage/DeliveryPage.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/pages/UsefulInfoPage/UsefulInfoPage.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/static.css'|theme }}">
+    <script src="{{ 'assets/js/navbar.js'|theme }}" defer></script>
+</head>
+<body class="page">
+    <div class="app-shell">
+        {% partial 'site/bg-decorations' %}
+    
+        {% partial 'site/navbar' %}
+    
+        <div class="app-content">
+            <div class="container">
+                {% page %}
+            </div>
+        </div>
+    
+        {% partial 'site/footer' %}
+    </div>
+</body>
+</html>

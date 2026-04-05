@@ -1,0 +1,39 @@
+uuid: b96f7a3e-702f-4e6d-aebf-7bbd4c4feee2
+handle: AlAmal\Page\About
+type: single
+name: About Page
+
+navigation:
+    parent: 8fbdab90-9d90-4ab9-86dc-3fb0b7584631
+    label: О компании
+    icon: icon-building
+    order: 30
+
+fields:
+    intro_image_path:
+        label: Путь к главному изображению
+        type: text
+        comment: 'Можно указать theme asset вроде assets/images/about1.png или media path.'
+
+    content:
+        label: Описание
+        type: richeditor
+        span: adaptive
+
+    production_title:
+        label: Заголовок блока производства
+        type: text
+
+    production_gallery:
+        label: Галерея производства
+        type: repeater
+        prompt: Добавить изображение
+        form:
+            fields:
+                image_path:
+                    label: Путь к изображению
+                    type: text
+
+                alt_text:
+                    label: Alt текст
+                    type: text

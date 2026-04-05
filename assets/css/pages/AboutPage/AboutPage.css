@@ -1,0 +1,125 @@
+.about-company-page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.about-company-container {
+    margin-bottom: 80px;
+}
+
+.about-company-container:first-child {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    width: 500px;
+    height: 432.556px;
+    border-radius: 35px;
+    object-fit: cover;
+    background-color: #f5f5f5;
+    flex-shrink: 0;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: #333;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    margin: 0 0 20px 0;
+}
+
+.about-text p {
+    color: #666;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.production h2 {
+    color: #333;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    margin-bottom: 32px;
+}
+
+.production-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.production-gallery img {
+    width: 380px;
+    height: 420.242px;
+    border-radius: 35px;
+    object-fit: cover;
+    background-color: #f5f5f5;
+}
+
+.production-rectangle {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.production-rectangle img {
+    width: 192.585px;
+    height: 7px;
+    display: block;
+}
+
+    @media (max-width: 992px) {
+    .about-company-container:first-child {
+        gap: 50px;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        aspect-ratio: 500 / 432.556;
+    }
+    .about-text {
+        text-align: center;
+    }
+    .production-gallery {
+        justify-content: center;
+    }
+    .production-gallery img {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        aspect-ratio: 380 / 420.242;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-text h2,
+    .production h2 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .about-text p {
+        font-size: 16px;
+    }
+    .about-company-container:first-child {
+        gap: 30px;
+    }
+}

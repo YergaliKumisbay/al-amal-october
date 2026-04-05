@@ -1,9 +1,12 @@
+/* Navbar.css – адаптировано под October CMS, стили как в Anima */
+
 .navbar {
     position: relative;
     z-index: 30;
     background: #fff;
 }
 
+/* Для главной страницы – поверх хедера, как в Anima, но без жёстких left/top */
 .navbar--home {
     position: absolute;
     top: 0;
@@ -12,16 +15,17 @@
     background: transparent;
 }
 
+/* Основной контейнер – теперь он будет внутри ._container, поэтому внешние отступы убраны */
 .navbar__container {
-    max-width: 1460px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: start;
-    gap: 28px;
-    padding: 28px 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;          /* как в Anima между группами */
+    padding: 28px 0 0;  /* вертикальный отступ, горизонтальный даст ._container */
+    flex-wrap: wrap;
 }
 
+/* Логотип – точные размеры из Anima */
 .navbar__logo img {
     width: 105.897px;
     height: 105.897px;
@@ -29,13 +33,13 @@
     object-fit: contain;
 }
 
+/* Меню – отступы и шрифты как в примере */
 .navbar__menu {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 36px;
+    gap: 34.6px;        /* из Anima: gap: 34.6px */
     list-style: none;
-    margin: 28px 0 0;
+    margin: 0;
     padding: 0;
     flex-wrap: wrap;
 }
@@ -46,12 +50,12 @@
     align-items: center;
 }
 
+/* Ссылки и кнопки – цвета, шрифты как в Anima */
 .navbar__menu-item a,
 .navbar__menu-button,
 .navbar__lang,
 .navbar__addresses-head,
-.navbar__city-button,
-.navbar__branch-link {
+.navbar__addresses-list a {
     color: #333;
     font-family: 'KZ Circe', sans-serif;
     text-decoration: none;
@@ -62,58 +66,66 @@
     font-size: 20px;
     font-weight: 400;
     line-height: normal;
+    letter-spacing: 0;
 }
 
+/* Активный пункт меню */
 .navbar__menu-item a.is-active,
 .navbar__menu-button.is-active {
     color: #cc9933;
 }
 
+/* Кнопка меню (Каталог/О нас) – выравнивание как в Anima */
 .navbar__menu-button,
 .navbar__lang {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 7.7px;         /* из Anima: gap: 7.7px */
     padding: 0;
     border: 0;
     background: transparent;
     cursor: pointer;
 }
 
+/* Скрываем стандартный маркер у details */
 .nav-dropdown > summary {
     list-style: none;
 }
-
 .nav-dropdown > summary::-webkit-details-marker {
     display: none;
 }
 
+/* Иконка полигона – точный размер */
 .navbar__menu-button img,
 .navbar__lang img {
     width: 4.721px;
     height: 4.088px;
 }
 
+/* Ховеры */
 .navbar__menu-item a:hover,
 .navbar__menu-button:hover,
 .navbar__lang:hover,
 .navbar__addresses-head:hover,
-.navbar__city-button:hover,
-.navbar__branch-link:hover {
+.navbar__addresses-list a:hover {
     color: #cc9933;
 }
 
+/* Блок справа (язык + адреса) – выравнивание как в Anima */
 .navbar__actions {
     display: flex;
     align-items: flex-start;
     gap: 28px;
-    margin-top: 28px;
+    margin-top: 0;      /* убрали лишний отступ */
 }
 
 .navbar__lang {
     font-size: 20px;
     font-weight: 400;
     line-height: normal;
+    display: inline-flex;
+    align-items: center;
+    gap: 7.7px;
 }
 
 .navbar__addresses {
@@ -123,17 +135,10 @@
     gap: 10px;
 }
 
-.navbar__city-switcher {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-}
-
 .navbar__addresses-head {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 10.1px;        /* из Anima: gap: 10.1px */
     font-size: 20px;
     font-weight: 400;
     line-height: normal;
@@ -150,79 +155,31 @@
     align-items: center;
     justify-content: flex-end;
     gap: 8px;
-    max-width: 320px;
+    margin-left: 28px;  /* как в Anima: сдвиг относительно иконки */
 }
 
-.navbar__city-button {
-    padding: 0;
-    border: 0;
-    background: transparent;
+.navbar__addresses-list a {
     font-size: 18px;
     font-weight: 300;
     line-height: 26px;
-    cursor: pointer;
+    white-space: nowrap;
 }
 
-.navbar__city-button.is-active {
-    color: #cc9933;
-}
-
-.navbar__city-separator,
-.navbar__branch-separator {
+.navbar__addresses-list img {
     width: 3.735px;
     height: 3.735px;
-    flex: 0 0 auto;
 }
 
-.navbar__branches-wrap {
-    width: 100%;
-}
-
-.navbar__branches-list {
-    display: none;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 8px;
-    max-width: 320px;
-}
-
-.navbar__branches-list.is-active {
-    display: flex;
-}
-
-.navbar__branch-link,
-.navbar__branch-empty {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
-}
-
-.navbar__branch-empty {
-    color: #777;
-    font-family: 'KZ Circe', sans-serif;
-}
-
+/* Адаптивность – сохраняем как было, но корректируем отступы */
 @media (max-width: 1200px) {
     .navbar__container {
-        padding: 24px 48px 0;
         gap: 20px;
     }
-
     .navbar__menu {
         gap: 24px;
-        margin-top: 28px;
     }
-
-    .navbar__actions {
-        margin-top: 28px;
-        gap: 20px;
-    }
-
-    .navbar__addresses-list,
-    .navbar__branches-list {
-        max-width: none;
-        justify-content: flex-end;
+    .navbar__addresses-list {
+        margin-left: 0;
     }
 }
 
@@ -232,82 +189,43 @@
         position: relative;
         background: #fff;
     }
-
     .navbar__container {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        padding: 20px 24px;
-        gap: 16px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
     }
-
-    .navbar__logo img {
-        width: 105.897px;
-        height: 105.897px;
-    }
-
     .navbar__menu {
-        flex-direction: row;
-        flex-wrap: wrap;
         justify-content: center;
-        margin-top: 0;
         gap: 16px 24px;
     }
-
     .navbar__actions {
         flex-direction: row;
         justify-content: center;
-        align-items: center;
         gap: 24px;
-        margin-top: 0;
-        width: auto;
     }
-
-    .navbar__addresses,
-    .navbar__city-switcher {
-        align-items: flex-end;
+    .navbar__addresses {
+        align-items: center;
     }
-
-    .navbar__addresses-list,
-    .navbar__branches-list {
-        justify-content: flex-end;
-        max-width: none;
+    .navbar__addresses-list {
+        margin-left: 0;
+        justify-content: center;
     }
 }
 
 @media (max-width: 640px) {
-    .navbar__container {
-        padding: 16px;
-    }
-
     .navbar__menu {
         flex-direction: column;
-        align-items: center;
         gap: 12px;
     }
-
     .navbar__actions {
         flex-direction: column;
         gap: 12px;
     }
-
-    .navbar__addresses,
-    .navbar__city-switcher {
+    .navbar__addresses-list {
+        flex-direction: column;
         align-items: center;
-        text-align: center;
     }
-
-    .navbar__addresses-list,
-    .navbar__branches-list {
-        justify-content: center;
-        gap: 6px;
-    }
-
-    .navbar__city-separator,
-    .navbar__branch-separator {
+    .navbar__addresses-list img {
         display: none;
-    }
-
-    .navbar__addresses-head {
-        justify-content: center;
     }
 }

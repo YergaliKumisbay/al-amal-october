@@ -1,0 +1,18 @@
+{% set imagePath = product.image_path ?: 'assets/images/centerImage.png' %}
+{% set imageUrl = imagePath starts with '/' ? imagePath|media : imagePath|theme %}
+<article class="card">
+    <img src="{{ imageUrl }}" alt="{{ product.title }}" class="card__image">
+    <div class="card__hart">
+        <h3 class="card__title">{{ product.title }}</h3>
+        <p class="card__composition">{{ product.composition }}</p>
+        <span class="card__price">{{ product.price }}</span>
+        <div class="card__footer">
+            <label class="quantity-selector" aria-label="Количество">
+                <span class="qty-btn" aria-hidden="true"><img src="{{ 'assets/icons/minus.svg'|theme }}" alt=""></span>
+                <input class="qty-input" type="number" value="1" min="1">
+                <span class="qty-btn" aria-hidden="true"><img src="{{ 'assets/icons/plus.svg'|theme }}" alt=""></span>
+            </label>
+            <a class="card__order-btn" href="{{ 'delivery'|page }}">{{ product.order_button_label ?: 'Заказать' }}</a>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "title": "Основные настройки",
+        "slug": "main-settings",
+        "is_enabled": 1,
+        "company_name": "AL-Amal",
+        "language_label": "Ру",
+        "instagram_url": "https://instagram.com/amal.ekb",
+        "whatsapp_url": "https://wa.me/77028155758",
+        "footer_year": "2026"
+    }
+]

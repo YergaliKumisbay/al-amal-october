@@ -1,0 +1,28 @@
+##
+url = "/reviews"
+layout = "default"
+title = "Отзывы"
+meta_title = "Al-Amal | Отзывы"
+
+[collection reviews]
+handle = "Content\Review"
+==
+{% set breadcrumbItems = [
+    { label: 'Главная', url: 'index'|page },
+    { label: 'Отзывы' }
+] %}
+{% set reviewList = reviews.orderBy('published_at', 'desc').get() %}
+
+{% partial 'site/breadcrumbs' items=breadcrumbItems %}
+
+<main class="reviews-page">
+    <h2 class="reviews-page__title">Отзывы</h2>
+
+    <div class="reviews-grid">
+        {% for review in reviewList %}
+            {% partial 'content/review-card' review=review %}
+        {% else %}
+            <p class="category-page__empty">Отзывы скоро появятся.</p>
+        {% endfor %}
+    </div>
+</main>

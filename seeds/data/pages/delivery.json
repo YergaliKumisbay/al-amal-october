@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "title": "Доставка",
+        "slug": "delivery",
+        "is_enabled": 1,
+        "image_path": "assets/images/delivery.png",
+        "min_order": "10 000 ₸",
+        "free_delivery_from": "от 15 000 ₸",
+        "delivery_cost": "1 500 ₸",
+        "phone": "+7 (702) 815-57-58"
+    }
+]

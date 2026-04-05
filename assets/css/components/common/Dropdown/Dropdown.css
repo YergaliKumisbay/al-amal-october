@@ -44,7 +44,6 @@
     cursor: pointer;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
     .dropdown {
         min-width: 200px;

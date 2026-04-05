@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al-Amal | Главная</title>
+    <title>Al-Amal | Манты</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://cdn.jsdelivr.net/gh/temirkhanov/kz-circle-font@main/fonts/kz-circle.css" rel="stylesheet">
     <link rel="stylesheet" href="src/index.css">
@@ -11,13 +11,11 @@
     <link rel="stylesheet" href="src/components/common/BackgroundDecorations/BackgroundDecorations.css">
     <link rel="stylesheet" href="src/components/Navbar/Navbar.css">
     <link rel="stylesheet" href="src/components/common/Dropdown/Dropdown.css">
+    <link rel="stylesheet" href="src/components/Breadcrumbs/Breadcrumbs.css">
     <link rel="stylesheet" href="src/components/Footer/Footer.css">
-    <link rel="stylesheet" href="src/components/Header/Header.css">
-    <link rel="stylesheet" href="src/components/common/SearchBar/SearchBar.css">
-    <link rel="stylesheet" href="src/components/MenuSections/MenuSection.css">
     <link rel="stylesheet" href="src/components/common/Card/Card.css">
     <link rel="stylesheet" href="src/components/common/QuantitySelector/QuantitySelector.css">
-    <link rel="stylesheet" href="src/pages/Main/MainPage.css">
+    <link rel="stylesheet" href="src/pages/CategoryPage/CategoryPage.css">
     <link rel="stylesheet" href="assets/css/static.css">
 </head>
 <body class="page">
@@ -28,11 +26,9 @@
         </div>
 
         <div class="app-content">
-            <nav class="navbar navbar--home" aria-label="Основная навигация">
+            <nav class="navbar" aria-label="Основная навигация">
                 <div class="navbar__container">
-                    <a class="navbar__logo" href="index.html">
-                        <img src="assets/logo.png" alt="Al-Amal">
-                    </a>
+                    <a class="navbar__logo" href="index.html"><img src="assets/logo.png" alt="Al-Amal"></a>
 
                     <ul class="navbar__menu">
                         <li class="navbar__menu-item navbar__menu-item--dropdown">
@@ -80,17 +76,12 @@
                     </ul>
 
                     <div class="navbar__actions">
-                        <span class="navbar__lang">
-                            Ру
-                            <img src="assets/icons/poligon.svg" alt="">
-                        </span>
-
+                        <span class="navbar__lang">Ру <img src="assets/icons/poligon.svg" alt=""></span>
                         <div class="navbar__addresses">
                             <a class="navbar__addresses-head" href="address.html">
                                 <img src="assets/icons/location.svg" alt="">
                                 <span>Адреса и филиалы</span>
                             </a>
-
                             <div class="navbar__addresses-list">
                                 <a href="address.html">Мы в Экибастузе</a>
                                 <img src="assets/icons/ellipse.svg" alt="">
@@ -102,44 +93,18 @@
                 </div>
             </nav>
 
-            <main class="main-page">
-                <section class="header">
-                    <div class="header__bg-circle" aria-hidden="true"></div>
+            <div class="breadcrumbs">
+                <a class="breadcrumb-link" href="index.html">Главная</a>
+                <span class="breadcrumb-separator"><img src="assets/icons/ellipse.svg" alt=""></span>
+                <span class="breadcrumb-current">Каталог</span>
+                <span class="breadcrumb-separator"><img src="assets/icons/ellipse.svg" alt=""></span>
+                <span class="breadcrumb-current">Манты</span>
+            </div>
 
-                    <div class="header__content">
-                        <h1 class="header__title">Al-Amal: Настоящий Домашний Вкус</h1>
-                        <p class="header__subtitle">Еда от Al-Amal, разнообразная, вкусная, халяльная, и сделанная с душой.</p>
-                        <a class="header__cta" href="catalog.html">Каталог</a>
-                    </div>
-
-                    <div class="header__visual" aria-hidden="true">
-                        <div class="header__orbit-wrap">
-                            <img class="header__orbit" src="assets/images/Group4.png" alt="">
-                            <img class="header__center-image" src="assets/images/centerImage.png" alt="">
-                            <img class="header__center-text" src="assets/images/centerText.png" alt="">
-                        </div>
-
-                        <img class="header__decor-image" src="assets/images/Group1597879492.png" alt="">
-
-                        <div class="header__socials">
-                            <a class="header__social-link" href="https://instagram.com/amal.ekb" target="_blank" rel="noreferrer" aria-label="Instagram">
-                                <img src="assets/images/instagram.png" alt="">
-                            </a>
-                            <a class="header__social-link" href="https://wa.me/77028155758" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-                                <img src="assets/images/whatsapp.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </section>
-
-                <form class="search-bar" action="catalog.html" method="get">
-                    <input class="search-bar__input" type="search" name="q" placeholder="Поиск по каталогу">
-                    <button class="search-bar__button" type="submit">поиск</button>
-                </form>
-
-                <section class="menu-section">
-                    <h2 class="section-title">Манты</h2>
-                    <div class="cards-grid">
+            <main class="category-page">
+                <div class="category-page__container">
+                    <h1 class="category-page__title">Манты</h1>
+                    <div class="category-page__grid">
                         <article class="card">
                             <img src="assets/images/manty-classic.png" alt="Манты классические" class="card__image">
                             <div class="card__hart">
@@ -156,7 +121,6 @@
                                 </div>
                             </div>
                         </article>
-
                         <article class="card">
                             <img src="assets/images/manty-pumpkin.png" alt="Манты с тыквой" class="card__image">
                             <div class="card__hart">
@@ -173,7 +137,38 @@
                                 </div>
                             </div>
                         </article>
-
+                        <article class="card">
+                            <img src="assets/images/manty-pumpkin.png" alt="Манты с тыквой" class="card__image">
+                            <div class="card__hart">
+                                <h3 class="card__title">Манты с тыквой</h3>
+                                <p class="card__composition">Тыква, лук, масло, тесто</p>
+                                <span class="card__price">1100 ₸</span>
+                                <div class="card__footer">
+                                    <label class="quantity-selector" aria-label="Количество">
+                                        <span class="qty-btn" aria-hidden="true"><img src="assets/icons/minus.svg" alt=""></span>
+                                        <input class="qty-input" type="number" value="1" min="1">
+                                        <span class="qty-btn" aria-hidden="true"><img src="assets/icons/plus.svg" alt=""></span>
+                                    </label>
+                                    <a class="card__order-btn" href="delivery.html">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="assets/images/manty-pumpkin.png" alt="Манты с тыквой" class="card__image">
+                            <div class="card__hart">
+                                <h3 class="card__title">Манты с тыквой</h3>
+                                <p class="card__composition">Тыква, лук, масло, тесто</p>
+                                <span class="card__price">1100 ₸</span>
+                                <div class="card__footer">
+                                    <label class="quantity-selector" aria-label="Количество">
+                                        <span class="qty-btn" aria-hidden="true"><img src="assets/icons/minus.svg" alt=""></span>
+                                        <input class="qty-input" type="number" value="1" min="1">
+                                        <span class="qty-btn" aria-hidden="true"><img src="assets/icons/plus.svg" alt=""></span>
+                                    </label>
+                                    <a class="card__order-btn" href="delivery.html">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
                         <article class="card">
                             <img src="assets/images/manty-pumpkin.png" alt="Манты с тыквой" class="card__image">
                             <div class="card__hart">
@@ -191,54 +186,12 @@
                             </div>
                         </article>
                     </div>
-                </section>
-
-                <section class="menu-section">
-                    <h2 class="section-title">Пельмени и вареники</h2>
-                    <div class="cards-grid">
-                        <article class="card">
-                            <img src="assets/images/pelmeni-classic.png" alt="Пельмени с говядиной" class="card__image">
-                            <div class="card__hart">
-                                <h3 class="card__title">Пельмени с говядиной</h3>
-                                <p class="card__composition">фарш, лук, 23 шт в кг</p>
-                                <span class="card__price">1200 ₸</span>
-                                <div class="card__footer">
-                                    <label class="quantity-selector" aria-label="Количество">
-                                        <span class="qty-btn" aria-hidden="true"><img src="assets/icons/minus.svg" alt=""></span>
-                                        <input class="qty-input" type="number" value="1" min="1">
-                                        <span class="qty-btn" aria-hidden="true"><img src="assets/icons/plus.svg" alt=""></span>
-                                    </label>
-                                    <a class="card__order-btn" href="delivery.html">Заказать</a>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <img src="assets/images/vareniki.png" alt="Вареники с картофелем" class="card__image">
-                            <div class="card__hart">
-                                <h3 class="card__title">Вареники с картофелем</h3>
-                                <p class="card__composition">фарш, лук, тыква, 23 шт в кг</p>
-                                <span class="card__price">1100 ₸</span>
-                                <div class="card__footer">
-                                    <label class="quantity-selector" aria-label="Количество">
-                                        <span class="qty-btn" aria-hidden="true"><img src="assets/icons/minus.svg" alt=""></span>
-                                        <input class="qty-input" type="number" value="1" min="1">
-                                        <span class="qty-btn" aria-hidden="true"><img src="assets/icons/plus.svg" alt=""></span>
-                                    </label>
-                                    <a class="card__order-btn" href="delivery.html">Заказать</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
+                </div>
             </main>
 
             <footer class="footer">
                 <div class="footer__container">
-                    <div class="footer__logo">
-                        <img src="assets/logo.png" alt="Al-Amal">
-                    </div>
-
+                    <div class="footer__logo"><img src="assets/logo.png" alt="Al-Amal"></div>
                     <div class="footer__column footer__column--catalog">
                         <h3 class="footer__title">Каталог</h3>
                         <div class="footer__catalog-grid">
@@ -255,7 +208,6 @@
                             <div class="footer__catalog-item"><a href="pastry.html">Готовая выпечка</a></div>
                         </div>
                     </div>
-
                     <div class="footer__column">
                         <h3 class="footer__title">Навигация</h3>
                         <ul class="footer__list">
@@ -264,7 +216,6 @@
                             <li class="footer__item"><a href="delivery.html">Доставка</a></li>
                         </ul>
                     </div>
-
                     <div class="footer__column">
                         <h3 class="footer__title">Адреса и филиалы</h3>
                         <ul class="footer__list">
@@ -272,14 +223,8 @@
                             <li class="footer__item">Мы в Алматы</li>
                         </ul>
                     </div>
-
-                    <div class="footer__copyright">
-                        <span>AL-Amal, 2026</span>
-                    </div>
-
-                    <div class="footer__visual">
-                        <img class="footer__right-text" src="assets/icons/footer-text.png" alt="">
-                    </div>
+                    <div class="footer__copyright"><span>AL-Amal, 2026</span></div>
+                    <div class="footer__visual"><img class="footer__right-text" src="assets/icons/footer-text.png" alt=""></div>
                 </div>
             </footer>
         </div>

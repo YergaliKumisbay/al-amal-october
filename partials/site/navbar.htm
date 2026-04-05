@@ -1,0 +1,78 @@
+{% set categories = navCategories.orderBy('nest_left').get() %}
+{% set branches = branchLinks.orderBy('nest_left').limit(2).get() %}
+{% set currentPage = this.page.id %}
+{% set isCatalog = currentPage in ['catalog', 'category'] %}
+{% set isAbout = currentPage in ['about', 'promotions', 'reviews'] %}
+{% set isInfo = currentPage in ['info', 'article'] %}
+{% set isDelivery = currentPage == 'delivery' %}
+<nav class="{{ currentPage == 'index' ? 'navbar navbar--home' : 'navbar' }}" aria-label="Основная навигация">
+     <div class="_container">
+        <div class="navbar__container">
+            <a class="navbar__logo" href="{{ 'index'|page }}">
+                <img src="{{ 'assets/logo.png'|theme }}" alt="{{ siteSettings.company_name ?: 'Al-Amal' }}">
+            </a>
+
+            <ul class="navbar__menu">
+                <li class="navbar__menu-item navbar__menu-item--dropdown{{ isCatalog ? ' navbar__menu-item--active' }}">
+                    <details class="nav-dropdown">
+                        <summary class="navbar__menu-button{{ isCatalog ? ' is-active' }}" aria-expanded="false">
+                            Каталог
+                            <img src="{{ 'assets/icons/poligon.svg'|theme }}" alt="">
+                        </summary>
+                        <div class="dropdown">
+                            <ul class="dropdown__list">
+                                {% for category in categories %}
+                                    <li class="dropdown__item">
+                                        <a class="dropdown__title" href="{{ 'category'|page({ slug: category.slug }) }}">{{ category.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </details>
+                </li>
+
+                <li class="navbar__menu-item navbar__menu-item--dropdown{{ isAbout ? ' navbar__menu-item--active' }}">
+                    <details class="nav-dropdown">
+                        <summary class="navbar__menu-button{{ isAbout ? ' is-active' }}" aria-expanded="false">
+                            О нас
+                            <img src="{{ 'assets/icons/poligon.svg'|theme }}" alt="">
+                        </summary>
+                        <div class="dropdown">
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item"><a class="dropdown__title" href="{{ 'about'|page }}">О компании</a></li>
+                                <li class="dropdown__item"><a class="dropdown__title" href="{{ 'promotions'|page }}">Акции</a></li>
+                                <li class="dropdown__item"><a class="dropdown__title" href="{{ 'reviews'|page }}">Отзывы</a></li>
+                            </ul>
+                        </div>
+                    </details>
+                </li>
+
+                <li class="navbar__menu-item"><a class="{{ isInfo ? 'is-active' }}" href="{{ 'info'|page }}">Полезная информация</a></li>
+                <li class="navbar__menu-item"><a class="{{ isDelivery ? 'is-active' }}" href="{{ 'delivery'|page }}">Доставка</a></li>
+            </ul>
+
+            <div class="navbar__actions">
+                <span class="navbar__lang">
+                    {{ siteSettings.language_label ?: 'Ру' }}
+                    <img src="{{ 'assets/icons/poligon.svg'|theme }}" alt="">
+                </span>
+
+                <div class="navbar__addresses">
+                    <a class="navbar__addresses-head" href="{{ 'address'|page }}">
+                        <img src="{{ 'assets/icons/location.svg'|theme }}" alt="">
+                        <span>Адреса и филиалы</span>
+                    </a>
+
+                    <div class="navbar__addresses-list">
+                        {% for branch in branches %}
+                            <a href="{{ 'address'|page }}">{{ branch.header_label ?: branch.title }}</a>
+                            {% if not loop.last %}
+                                <img src="{{ 'assets/icons/ellipse.svg'|theme }}" alt="">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,26 @@
+uuid: 9f3d1d23-6c3d-4c0e-a8f6-3dcb6a2a4d11
+handle: Location\City
+type: structure
+name: City
+drafts: false
+
+structure:
+    maxDepth: 1
+
+navigation:
+    parent: 8fbdab90-9d90-4ab9-86dc-3fb0b7584631
+    label: Города
+    icon: icon-building
+    order: 85
+
+fields:
+    nav_label:
+        label: Текст для navbar
+        comment: Например, Мы в Экибастузе
+        type: text
+
+    branches:
+        type: entries
+        source: Location\Branch
+        inverse: city
+        hidden: true

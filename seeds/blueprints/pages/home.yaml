@@ -1,0 +1,24 @@
+uuid: 0e2d66f5-1b3b-4899-b2c4-c684b6a42f20
+handle: Page\Home
+type: single
+name: Home Page
+
+navigation:
+    parent: 8fbdab90-9d90-4ab9-86dc-3fb0b7584631
+    label: Главная
+    icon: icon-home
+    order: 20
+
+fields:
+    hero_title:
+        label: Заголовок
+        type: text
+
+    hero_subtitle:
+        label: Подзаголовок
+        type: textarea
+        size: small
+
+    hero_cta_label:
+        label: Текст кнопки
+        type: text

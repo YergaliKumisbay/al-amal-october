@@ -1,0 +1,35 @@
+##
+url = "/delivery"
+layout = "default"
+title = "Доставка"
+meta_title = "{{ delivery.title ? 'Al-Amal | ' ~ delivery.title : 'Al-Amal | Доставка' }}"
+
+[section delivery]
+handle = "Page\Delivery"
+==
+{% set breadcrumbItems = [
+    { label: 'Главная', url: 'index'|page },
+    { label: 'Доставка' }
+] %}
+{% set imagePath = delivery.image_path ?: 'assets/images/delivery.png' %}
+{% set imageUrl = imagePath starts with '/' ? imagePath|media : imagePath|theme %}
+
+{% partial 'site/breadcrumbs' items=breadcrumbItems %}
+
+<main class="delivery-page">
+    <div class="delivery-container">
+        <div class="delivery-image"><img src="{{ imageUrl }}" alt="{{ delivery.title ?: 'Доставка' }}"></div>
+        <div class="delivery-info">
+            <h1 class="delivery-title">{{ delivery.title ?: 'Доставка' }}</h1>
+            <div class="delivery-details">
+                <div class="delivery-row"><span class="delivery-label">Минимальный заказ:</span><span class="delivery-value">{{ delivery.min_order }}</span></div>
+                <div class="delivery-row"><span class="delivery-label">Бесплатная доставка:</span><span class="delivery-value">{{ delivery.free_delivery_from }}</span></div>
+                <div class="delivery-row"><span class="delivery-label">Стоимость доставки:</span><span class="delivery-value">{{ delivery.delivery_cost }}</span></div>
+            </div>
+            <div class="delivery-phone">
+                <span class="phone-label">Телефон:</span>
+                <a class="phone-number" href="tel:{{ delivery.phone|replace({' ': '', '(': '', ')': '', '-': ''}) }}">{{ delivery.phone }}</a>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "title": "Здесь будет краткое название и условие акции, кнопка будет переводить в Instagram",
+        "slug": "promotion-1",
+        "is_enabled": 1,
+        "published_at": "2026-01-01",
+        "image_path": "assets/images/promotions1.png",
+        "date_text": "результаты 01 января 2026",
+        "button_label": "Читать",
+        "button_url": "https://instagram.com/amal.ekb"
+    },
+    {
+        "id": 2,
+        "title": "Здесь будет краткое название и условие акции, кнопка будет переводить в Instagram",
+        "slug": "promotion-2",
+        "is_enabled": 1,
+        "published_at": "2026-01-01",
+        "image_path": "assets/images/promotions2.png",
+        "date_text": "результаты 01 января 2026",
+        "button_label": "Читать",
+        "button_url": "https://instagram.com/amal.ekb"
+    }
+]

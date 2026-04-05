@@ -1,0 +1,12 @@
+{% set imagePath = promotion.image_path ?: 'assets/images/promotions1.png' %}
+{% set imageUrl = imagePath starts with '/' ? imagePath|media : imagePath|theme %}
+<article class="promotion-card">
+    <img class="promotion-card__image" src="{{ imageUrl }}" alt="{{ promotion.title }}">
+    <div class="promotion-card__content">
+        <h2 class="promotion-card__title">{{ promotion.title }}</h2>
+        <p class="promotion-card__description">{{ promotion.date_text }}</p>
+        <a class="promotion-card__button" href="{{ promotion.button_url ?: 'https://instagram.com/amal.ekb' }}" target="_blank" rel="noreferrer">
+            {{ promotion.button_label ?: 'Читать' }}
+        </a>
+    </div>
+</article>

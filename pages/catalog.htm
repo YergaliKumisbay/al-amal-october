@@ -1,0 +1,38 @@
+url = "/catalog"
+layout = "default"
+title = "Каталог"
+meta_title = "Al-Amal | Каталог"
+
+[collection categories]
+handle = "Catalog\Category"
+==
+{# {% set breadcrumbItems = [
+    { label: 'Главная', url: 'index'|page },
+    { label: 'Каталог' }
+] %}
+{% set categoryList = categories.orderBy('nest_left').get() %}
+
+{% partial 'site/breadcrumbs' items=breadcrumbItems %}
+
+<main class="category-page">
+    <div class="category-page__container">
+
+        <form class="search-bar" action="{{ 'catalog'|page }}" method="get">
+            <input class="search-bar__input" type="search" name="q" placeholder="Поиск по каталогу">
+            <button class="search-bar__button" type="submit">поиск</button>
+        </form>
+
+        {% for category in categoryList %}
+            <section class="menu-section">
+                <h2 class="section-title"><a href="{{ 'category'|page({ slug: category.slug }) }}">{{ category.title }}</a></h2>
+                <div class="cards-grid">
+                    {% for product in category.products %}
+                        {% partial 'catalog/product-card' product=product %}
+                    {% else %}
+                        <p class="category-page__empty">Скоро здесь появятся товары.</p>
+                    {% endfor %}
+                </div>
+            </section>
+        {% endfor %}
+    </div>
+</main> #}

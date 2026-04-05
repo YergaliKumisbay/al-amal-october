@@ -1,0 +1,70 @@
+-
+    name: Site Settings Data
+    class: Tailor\Models\RecordImport
+    file: seeds/data/site/settings.json
+    attributes:
+        file_format: json
+        blueprint_uuid: 8fbdab90-9d90-4ab9-86dc-3fb0b7584631
+-
+    name: Home Page Data
+    class: Tailor\Models\RecordImport
+    file: seeds/data/pages/home.json
+    attributes:
+        file_format: json
+        blueprint_uuid: 0e2d66f5-1b3b-4899-b2c4-c684b6a42f20
+-
+    name: About Page Data
+    class: Tailor\Models\RecordImport
+    file: seeds/data/pages/about.json
+    attributes:
+        file_format: json
+        blueprint_uuid: b96f7a3e-702f-4e6d-aebf-7bbd4c4feee2
+-
+    name: Delivery Page Data
+    class: Tailor\Models\RecordImport
+    file: seeds/data/pages/delivery.json
+    attributes:
+        file_format: json
+        blueprint_uuid: 0ab8dd0b-35df-4ef0-bd16-ec678c95ba9b
+-
+    name: Category Data
+    class: Tailor\Models\RecordImport
+    file: seeds/data/catalog/category.json
+    attributes:
+        file_format: json
+        blueprint_uuid: 4ce16ab9-b07d-4b17-89b9-670a43d5d3f6
+-
+    name: Promotion Data
+    class: Tailor\Models\RecordImport
+    file: seeds/data/content/promotion.json
+    attributes:
+        file_format: json
+        blueprint_uuid: 3ff5377f-883c-458f-b8c1-9426b3c38973
+-
+    name: Review Data
+    class: Tailor\Models\RecordImport
+    file: seeds/data/content/review.json
+    attributes:
+        file_format: json
+        blueprint_uuid: a6d77703-ed22-4372-bfc3-8aa4ec7b8031
+-
+    name: Article Data
+    class: Tailor\Models\RecordImport
+    file: seeds/data/content/article.json
+    attributes:
+        file_format: json
+        blueprint_uuid: 48495860-0965-45bd-b926-e8f3a51174b4
+-
+    name: City Data
+    class: Tailor\Models\RecordImport
+    file: seeds/data/location/city.json
+    attributes:
+        file_format: json
+        blueprint_uuid: 9f3d1d23-6c3d-4c0e-a8f6-3dcb6a2a4d11
+-
+    name: Branch Data
+    class: Tailor\Models\RecordImport
+    file: seeds/data/location/branch.json
+    attributes:
+        file_format: json
+        blueprint_uuid: c6bb6c04-d2ea-4df0-8f5f-af12d15adf3c

@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "Экибастуз",
+        "slug": "ekibastuz",
+        "is_enabled": 1,
+        "nav_label": "Мы в Экибастузе"
+    },
+    {
+        "id": 2,
+        "title": "Алматы",
+        "slug": "almaty",
+        "is_enabled": 1,
+        "nav_label": "Мы в Алматы"
+    }
+]

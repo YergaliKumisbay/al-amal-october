@@ -1,0 +1,14 @@
+[
+    { "id": 1, "title": "Отзыв 1", "slug": "review-1", "is_enabled": 1, "published_at": "2026-01-01", "image_path": "assets/images/review1.png", "alt_text": "Отзыв 1" },
+    { "id": 2, "title": "Отзыв 2", "slug": "review-2", "is_enabled": 1, "published_at": "2026-01-02", "image_path": "assets/images/review2.png", "alt_text": "Отзыв 2" },
+    { "id": 3, "title": "Отзыв 3", "slug": "review-3", "is_enabled": 1, "published_at": "2026-01-03", "image_path": "assets/images/review3.png", "alt_text": "Отзыв 3" },
+    { "id": 4, "title": "Отзыв 4", "slug": "review-4", "is_enabled": 1, "published_at": "2026-01-04", "image_path": "assets/images/review4.png", "alt_text": "Отзыв 4" },
+    { "id": 5, "title": "Отзыв 5", "slug": "review-5", "is_enabled": 1, "published_at": "2026-01-05", "image_path": "assets/images/review5.png", "alt_text": "Отзыв 5" },
+    { "id": 6, "title": "Отзыв 6", "slug": "review-6", "is_enabled": 1, "published_at": "2026-01-06", "image_path": "assets/images/review6.png", "alt_text": "Отзыв 6" },
+    { "id": 7, "title": "Отзыв 7", "slug": "review-7", "is_enabled": 1, "published_at": "2026-01-07", "image_path": "assets/images/review7.png", "alt_text": "Отзыв 7" },
+    { "id": 8, "title": "Отзыв 8", "slug": "review-8", "is_enabled": 1, "published_at": "2026-01-08", "image_path": "assets/images/review8.png", "alt_text": "Отзыв 8" },
+    { "id": 9, "title": "Отзыв 9", "slug": "review-9", "is_enabled": 1, "published_at": "2026-01-09", "image_path": "assets/images/review9.png", "alt_text": "Отзыв 9" },
+    { "id": 10, "title": "Отзыв 10", "slug": "review-10", "is_enabled": 1, "published_at": "2026-01-10", "image_path": "assets/images/review10.png", "alt_text": "Отзыв 10" },
+    { "id": 11, "title": "Отзыв 11", "slug": "review-11", "is_enabled": 1, "published_at": "2026-01-11", "image_path": "assets/images/review11.png", "alt_text": "Отзыв 11" },
+    { "id": 12, "title": "Отзыв 12", "slug": "review-12", "is_enabled": 1, "published_at": "2026-01-12", "image_path": "assets/images/review12.png", "alt_text": "Отзыв 12" }
+]

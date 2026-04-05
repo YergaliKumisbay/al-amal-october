@@ -1,0 +1,33 @@
+uuid: 3ff5377f-883c-458f-b8c1-9426b3c38973
+handle: Content\Promotion
+type: stream
+name: Promotion
+drafts: false
+
+navigation:
+    parent: 8fbdab90-9d90-4ab9-86dc-3fb0b7584631
+    label: Акции
+    icon: icon-bullhorn
+    order: 60
+
+fields:
+    published_at:
+        label: Дата публикации
+        type: datepicker
+        mode: date
+
+    image_path:
+        label: Путь к изображению
+        type: text
+
+    date_text:
+        label: Подпись даты
+        type: text
+
+    button_label:
+        label: Текст кнопки
+        type: text
+
+    button_url:
+        label: Ссылка кнопки
+        type: text

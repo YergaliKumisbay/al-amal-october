@@ -1,0 +1,120 @@
+[
+    {
+        "id": 1,
+        "title": "Манты",
+        "slug": "manty",
+        "is_enabled": 1,
+        "show_on_home": 1,
+        "products": [
+            {
+                "title": "Манты классические",
+                "composition": "Говядина, лук, тесто, специи",
+                "price": "1200 ₸",
+                "image_path": "assets/images/manty-classic.png",
+                "order_button_label": "Заказать"
+            },
+            {
+                "title": "Манты с тыквой",
+                "composition": "Тыква, лук, масло, тесто",
+                "price": "1100 ₸",
+                "image_path": "assets/images/manty-pumpkin.png",
+                "order_button_label": "Заказать"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Пельмени и вареники",
+        "slug": "pelmeni-i-vareniki",
+        "is_enabled": 1,
+        "show_on_home": 1,
+        "products": [
+            {
+                "title": "Пельмени с говядиной",
+                "composition": "фарш, лук, 23 шт в кг",
+                "price": "1200 ₸",
+                "image_path": "assets/images/pelmeni-classic.png",
+                "order_button_label": "Заказать"
+            },
+            {
+                "title": "Вареники с картофелем",
+                "composition": "фарш, лук, тыква, 23 шт в кг",
+                "price": "1100 ₸",
+                "image_path": "assets/images/vareniki.png",
+                "order_button_label": "Заказать"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Хинкали",
+        "slug": "hinkali",
+        "is_enabled": 1,
+        "show_on_home": 0,
+        "products": []
+    },
+    {
+        "id": 4,
+        "title": "Перец фаршированный",
+        "slug": "pepper",
+        "is_enabled": 1,
+        "show_on_home": 0,
+        "products": []
+    },
+    {
+        "id": 5,
+        "title": "Котлеты",
+        "slug": "cutlets",
+        "is_enabled": 1,
+        "show_on_home": 0,
+        "products": []
+    },
+    {
+        "id": 6,
+        "title": "Тесто",
+        "slug": "dough",
+        "is_enabled": 1,
+        "show_on_home": 0,
+        "products": []
+    },
+    {
+        "id": 7,
+        "title": "Самса, сосиски в тесте",
+        "slug": "samsa",
+        "is_enabled": 1,
+        "show_on_home": 0,
+        "products": []
+    },
+    {
+        "id": 8,
+        "title": "Борек",
+        "slug": "borek",
+        "is_enabled": 1,
+        "show_on_home": 0,
+        "products": []
+    },
+    {
+        "id": 9,
+        "title": "Печенье / блины",
+        "slug": "pancakes",
+        "is_enabled": 1,
+        "show_on_home": 0,
+        "products": []
+    },
+    {
+        "id": 10,
+        "title": "Пироги",
+        "slug": "pies",
+        "is_enabled": 1,
+        "show_on_home": 0,
+        "products": []
+    },
+    {
+        "id": 11,
+        "title": "Готовая выпечка",
+        "slug": "pastry",
+        "is_enabled": 1,
+        "show_on_home": 0,
+        "products": []
+    }
+]

@@ -1,0 +1,42 @@
+.promotions-page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.promotions-page__title {
+    color: #333;
+    font-family: 'KZ Circe', sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.promotions-page__title::after {
+    content: '';
+    position: absolute;
+    width: 34.097px;
+    height: 5px;
+    background: #CC9933;
+    left: 0;
+    bottom: -10px;
+}
+
+.promotions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .promotions-grid {
+        gap: 16px;
+    }
+    .promotion-card {
+        width: 100%;
+    }
+}

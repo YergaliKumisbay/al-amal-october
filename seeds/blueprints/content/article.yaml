@@ -1,0 +1,42 @@
+uuid: 48495860-0965-45bd-b926-e8f3a51174b4
+handle: Content\Article
+type: stream
+name: Article
+drafts: true
+
+navigation:
+    parent: 8fbdab90-9d90-4ab9-86dc-3fb0b7584631
+    label: Полезная информация
+    icon: icon-newspaper-o
+    order: 80
+
+fields:
+    kind:
+        label: Тип материала
+        type: dropdown
+        options:
+            article: Статья
+            recipe: Рецепт
+
+    published_at:
+        label: Дата публикации
+        type: datepicker
+        mode: date
+
+    image_path:
+        label: Путь к изображению
+        type: text
+
+    excerpt:
+        label: Краткое описание
+        type: textarea
+        size: small
+
+    button_label:
+        label: Текст кнопки
+        type: text
+
+    content:
+        label: Содержимое
+        type: richeditor
+        span: adaptive

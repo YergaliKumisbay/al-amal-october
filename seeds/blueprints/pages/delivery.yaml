@@ -1,0 +1,31 @@
+uuid: 0ab8dd0b-35df-4ef0-bd16-ec678c95ba9b
+handle: Page\Delivery
+type: single
+name: Delivery Page
+
+navigation:
+    parent: 8fbdab90-9d90-4ab9-86dc-3fb0b7584631
+    label: Доставка
+    icon: icon-truck
+    order: 40
+
+fields:
+    image_path:
+        label: Путь к изображению
+        type: text
+
+    min_order:
+        label: Минимальный заказ
+        type: text
+
+    free_delivery_from:
+        label: Бесплатная доставка от
+        type: text
+
+    delivery_cost:
+        label: Стоимость доставки
+        type: text
+
+    phone:
+        label: Телефон
+        type: text

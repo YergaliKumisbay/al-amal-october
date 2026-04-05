@@ -1,0 +1,64 @@
+##
+url = "/address"
+layout = "default"
+title = "Адреса и филиалы"
+meta_title = "Al-Amal | Адреса и филиалы"
+
+[collection branches]
+handle = "Location\Branch"
+==
+{% set breadcrumbItems = [
+    { label: 'Главная', url: 'index'|page },
+    { label: 'Адреса и филиалы' }
+] %}
+{% set branchList = branches.orderBy('nest_left').get() %}
+
+{% partial 'site/breadcrumbs' items=breadcrumbItems %}
+
+<main class="address-page">
+    {% for branch in branchList %}
+        <input class="visually-hidden" type="radio" name="branch" id="branch-{{ loop.index }}"{{ loop.first ? ' checked' }}>
+    {% endfor %}
+
+    <section class="address-layout">
+        <aside class="branch-card">
+            <p class="address-card-title">Выберите филиал:</p>
+            <div class="branch-list">
+                {% for branch in branchList %}
+                    <label class="branch-item branch-item--{{ loop.index }}" for="branch-{{ loop.index }}">
+                        <span class="branch-index">{{ loop.index }}.</span>
+                        <span class="branch-name">{{ branch.title }}</span>
+                    </label>
+                {% endfor %}
+            </div>
+        </aside>
+
+        <div class="address-content">
+            {% for branch in branchList %}
+                <div class="address-page__panel address-page__panel--{{ loop.index }}">
+                    <div class="address-top-cards">
+                        <article class="info-card">
+                            <p class="address-card-title">Адрес:</p>
+                            <p class="address-main-text">{{ branch.address_text }}</p>
+                        </article>
+                        <article class="info-card">
+                            <p class="address-card-title">Telegram:</p>
+                            <a class="contact-text" href="{{ branch.telegram_url }}">{{ branch.telegram_label }}</a>
+                            <p class="address-card-title contact-subtitle">WhatsApp:</p>
+                            <a class="contact-text" href="{{ branch.whatsapp_url }}">{{ branch.whatsapp_label }}</a>
+                        </article>
+                        <article class="info-card">
+                            <p class="address-card-title">Email:</p>
+                            <a class="contact-text" href="mailto:{{ branch.email }}">{{ branch.email }}</a>
+                            <p class="address-card-title contact-subtitle">Instagram:</p>
+                            <a class="contact-text" href="{{ branch.instagram_url }}" target="_blank" rel="noreferrer">{{ branch.instagram_label }}</a>
+                        </article>
+                    </div>
+                    <div class="map-card">
+                        <iframe title="Карта филиала {{ branch.title }}" src="{{ branch.map_embed_url }}" loading="lazy"></iframe>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>

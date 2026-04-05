@@ -1,0 +1,35 @@
+uuid: 8fbdab90-9d90-4ab9-86dc-3fb0b7584631
+handle: Site\Settings
+type: entry
+name: Site Settings
+
+primaryNavigation:
+    label: Al-Amal
+    icon: icon-cutlery
+    order: 100
+
+navigation:
+    label: Настройки сайта
+    icon: icon-cog
+    order: 10
+
+fields:
+    company_name:
+        label: Название компании
+        type: text
+
+    language_label:
+        label: Язык
+        type: text
+
+    instagram_url:
+        label: Instagram URL
+        type: text
+
+    whatsapp_url:
+        label: WhatsApp URL
+        type: text
+
+    footer_year:
+        label: Год в футере
+        type: text
